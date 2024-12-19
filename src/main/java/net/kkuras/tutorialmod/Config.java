@@ -1,4 +1,4 @@
-package net.kkura.tutorialmod;
+package net.kkuras.tutorialmod;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;

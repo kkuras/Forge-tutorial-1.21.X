@@ -1,6 +1,6 @@
-package net.kkura.tutorialmod.item;
+package net.kkuras.tutorialmod.item;
 
-import net.kkura.tutorialmod.TutorialMod;
+import net.kkuras.tutorialmod.TutorialMod;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
