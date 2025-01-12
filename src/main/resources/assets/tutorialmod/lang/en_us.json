@@ -20,7 +20,7 @@
   "tooltip.tutorialmod.magic_block.tooltip": "This Block is quite §9MAGICAL§r",
 
   "tooltip.tutorialmod.chisel.shift_down": "This item changes certain Blocks",
-  "tooltip.tutorialmod.chisel": "Press §eShift§r for more Information!",
+  "tooltip.tutorialmod.chisel": "Press §e§nShift§r for more Information!",
 
   "tooltip.tutorialmod.kohlrabi": "This tastes Great!"
 }
