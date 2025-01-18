@@ -1,6 +1,7 @@
 package net.kkuras.tutorialmod.block;
 
 import net.kkuras.tutorialmod.TutorialMod;
+import net.kkuras.tutorialmod.block.custom.AlexandriteLampBlock;
 import net.kkuras.tutorialmod.block.custom.MagicBlock;
 import net.kkuras.tutorialmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -64,6 +65,9 @@ public class ModBlocks {
     public static final RegistryObject<TrapDoorBlock> ALEXANDRITE_TRAPDOOR = registerBlock("alexandrite_trapdoor",
             () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().noOcclusion()));
 
+    public static final RegistryObject<Block> ALEXANDRITE_LAMP = registerBlock("alexandrite_lamp",
+            () -> new AlexandriteLampBlock(BlockBehaviour.Properties.of().strength(3f)
+                    .lightLevel(state -> state.getValue(AlexandriteLampBlock.CLICKED) ? 15 : 0)));
 
 
 
