@@ -2,6 +2,7 @@ package net.kkuras.tutorialmod;
 
 import com.mojang.logging.LogUtils;
 import net.kkuras.tutorialmod.block.ModBlocks;
+import net.kkuras.tutorialmod.component.ModDataComponentTypes;
 import net.kkuras.tutorialmod.item.ModCreativeModTabs;
 import net.kkuras.tutorialmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -37,6 +38,8 @@ public class TutorialMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModDataComponentTypes.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
