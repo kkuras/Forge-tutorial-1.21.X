@@ -32,6 +32,8 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.ALEXANDRITE_AXE.get());
                         output.accept(ModItems.ALEXANDRITE_HOE.get());
 
+                        output.accept(ModItems.ALEXANDRITE_HAMMER.get());
+
                     }).build());
 
 
