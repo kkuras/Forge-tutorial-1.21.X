@@ -19,8 +19,7 @@
   "item.tutorialmod.alexandrite_boots": "Alexandrite Boots",
 
   "item.tutorialmod.alexandrite_horse_armor": "Alexandrite Horse Armor",
-
-
+  "item.tutorialmod.kaupen_armor_trim_smithing_template": "Kaupen Trim Template",
 
 
   "block.tutorialmod.alexandrite_block": "Block of Alexandrite",
@@ -55,5 +54,8 @@
   "tooltip.tutorialmod.chisel.shift_down": "This item changes certain Blocks",
   "tooltip.tutorialmod.chisel": "Press §e§nShift§r for more Information!",
 
-  "tooltip.tutorialmod.kohlrabi": "This tastes Great!"
+  "tooltip.tutorialmod.kohlrabi": "This tastes Great!",
+
+  "trim_pattern.tutorialmod.kaupen": "Kaupen Armor Trim",
+  "trim_material.tutorialmod.alexandrite": "Alexandrite Material"
 }

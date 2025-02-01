@@ -6,6 +6,7 @@ import net.kkuras.tutorialmod.item.custom.FuelItem;
 import net.kkuras.tutorialmod.item.custom.HammerItem;
 import net.kkuras.tutorialmod.item.custom.ModArmorItem;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -71,6 +72,9 @@ public class ModItems {
     public static final RegistryObject<Item> ALEXANDRITE_HORSE_ARMOR = ITEMS.register("alexandrite_horse_armor",
             () -> new AnimalArmorItem(ModArmorMaterials.ALEXANDRITE_ARMOR_MATERIAL, AnimalArmorItem.BodyType.EQUESTRIAN,
                     false, new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> KAUPEN_SMITHING_TEMPLATE = ITEMS.register("kaupen_armor_trim_smithing_template",
+            () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "kaupen")));
 
 
 
