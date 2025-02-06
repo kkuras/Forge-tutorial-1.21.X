@@ -5,6 +5,7 @@ import net.kkuras.tutorialmod.block.ModBlocks;
 import net.kkuras.tutorialmod.component.ModDataComponentTypes;
 import net.kkuras.tutorialmod.item.ModCreativeModTabs;
 import net.kkuras.tutorialmod.item.ModItems;
+import net.kkuras.tutorialmod.sound.ModSounds;
 import net.kkuras.tutorialmod.util.ModItemProperties;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -41,6 +42,7 @@ public class TutorialMod {
         ModBlocks.register(modEventBus);
 
         ModDataComponentTypes.register(modEventBus);
+        ModSounds.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
