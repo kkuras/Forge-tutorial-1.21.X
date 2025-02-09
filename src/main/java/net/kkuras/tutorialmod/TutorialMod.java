@@ -3,6 +3,7 @@ package net.kkuras.tutorialmod;
 import com.mojang.logging.LogUtils;
 import net.kkuras.tutorialmod.block.ModBlocks;
 import net.kkuras.tutorialmod.component.ModDataComponentTypes;
+import net.kkuras.tutorialmod.effect.ModEffects;
 import net.kkuras.tutorialmod.item.ModCreativeModTabs;
 import net.kkuras.tutorialmod.item.ModItems;
 import net.kkuras.tutorialmod.sound.ModSounds;
@@ -43,6 +44,9 @@ public class TutorialMod {
 
         ModDataComponentTypes.register(modEventBus);
         ModSounds.register(modEventBus);
+
+        ModEffects.register(modEventBus);
+
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
