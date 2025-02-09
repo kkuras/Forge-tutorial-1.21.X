@@ -44,6 +44,8 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.KAUPEN_SMITHING_TEMPLATE.get());
 
                         output.accept(ModItems.KAUPEN_BOW.get());
+                        output.accept(ModItems.BAR_BRAWL_MUSIC_DISC.get());
+
                     }).build());
 
 
