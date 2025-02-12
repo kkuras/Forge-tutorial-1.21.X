@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.kkuras.tutorialmod.block.ModBlocks;
 import net.kkuras.tutorialmod.component.ModDataComponentTypes;
 import net.kkuras.tutorialmod.effect.ModEffects;
+import net.kkuras.tutorialmod.enchantment.ModEnchantmentsEffects;
 import net.kkuras.tutorialmod.item.ModCreativeModTabs;
 import net.kkuras.tutorialmod.item.ModItems;
 import net.kkuras.tutorialmod.potion.ModPotions;
@@ -48,6 +49,8 @@ public class TutorialMod {
 
         ModEffects.register(modEventBus);
         ModPotions.register(modEventBus);
+
+        ModEnchantmentsEffects.register(modEventBus);
 
 
         // Register the item to a creative tab
