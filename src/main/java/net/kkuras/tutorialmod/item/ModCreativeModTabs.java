@@ -46,6 +46,8 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.KAUPEN_BOW.get());
                         output.accept(ModItems.BAR_BRAWL_MUSIC_DISC.get());
 
+                        output.accept(ModItems.KOHLRABI_SEEDS.get());
+
                     }).build());
 
 
