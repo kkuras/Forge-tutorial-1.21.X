@@ -2,6 +2,7 @@ package net.kkuras.tutorialmod.block;
 
 import net.kkuras.tutorialmod.TutorialMod;
 import net.kkuras.tutorialmod.block.custom.AlexandriteLampBlock;
+import net.kkuras.tutorialmod.block.custom.HoneyBerryBushBlock;
 import net.kkuras.tutorialmod.block.custom.KohlrabiCropBlock;
 import net.kkuras.tutorialmod.block.custom.MagicBlock;
 import net.kkuras.tutorialmod.item.ModItems;
@@ -73,6 +74,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> KOHLRABI_CROP = BLOCKS.register("kohlrabi_crop",
             () -> new KohlrabiCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
+    public static final RegistryObject<Block> HONEY_BERRY_BUSH = BLOCKS.register("honey_berry_bush",
+            () -> new HoneyBerryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
 
 
 
