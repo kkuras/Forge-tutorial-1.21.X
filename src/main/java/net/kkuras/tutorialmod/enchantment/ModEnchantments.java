@@ -18,7 +18,7 @@ public class ModEnchantments {
     public static final ResourceKey<Enchantment> LIGHTNING_STRIKER = ResourceKey.create(Registries.ENCHANTMENT,
             ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "lightning_striker"));
 
-    public static void bootsrap(BootstrapContext<Enchantment> context) {
+    public static void bootstrap(BootstrapContext<Enchantment> context) {
         var enchantments = context.lookup(Registries.ENCHANTMENT);
         var items = context.lookup(Registries.ITEM);
 
