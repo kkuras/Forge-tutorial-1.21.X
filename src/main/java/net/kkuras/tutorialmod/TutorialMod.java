@@ -5,11 +5,14 @@ import net.kkuras.tutorialmod.block.ModBlocks;
 import net.kkuras.tutorialmod.component.ModDataComponentTypes;
 import net.kkuras.tutorialmod.effect.ModEffects;
 import net.kkuras.tutorialmod.enchantment.ModEnchantmentsEffects;
+import net.kkuras.tutorialmod.entity.ModEntities;
+import net.kkuras.tutorialmod.entity.client.TriceratopsRenderer;
 import net.kkuras.tutorialmod.item.ModCreativeModTabs;
 import net.kkuras.tutorialmod.item.ModItems;
 import net.kkuras.tutorialmod.potion.ModPotions;
 import net.kkuras.tutorialmod.sound.ModSounds;
 import net.kkuras.tutorialmod.util.ModItemProperties;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
@@ -52,7 +55,7 @@ public class TutorialMod {
         ModPotions.register(modEventBus);
 
         ModEnchantmentsEffects.register(modEventBus);
-
+        ModEntities.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -93,6 +96,8 @@ public class TutorialMod {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             ModItemProperties.addCustomItemProperties();
+
+            EntityRenderers.register(ModEntities.TRICERATOPS.get(), TriceratopsRenderer::new);
         }
     }
 } 

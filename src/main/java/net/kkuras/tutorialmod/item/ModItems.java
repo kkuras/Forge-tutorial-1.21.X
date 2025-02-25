@@ -2,6 +2,7 @@ package net.kkuras.tutorialmod.item;
 
 import net.kkuras.tutorialmod.TutorialMod;
 import net.kkuras.tutorialmod.block.ModBlocks;
+import net.kkuras.tutorialmod.entity.ModEntities;
 import net.kkuras.tutorialmod.item.custom.ChiselItem;
 import net.kkuras.tutorialmod.item.custom.FuelItem;
 import net.kkuras.tutorialmod.item.custom.HammerItem;
@@ -10,6 +11,7 @@ import net.kkuras.tutorialmod.sound.ModSounds;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -90,6 +92,8 @@ public class ModItems {
     public static final RegistryObject<Item> HONEY_BERRIES = ITEMS.register("honey_berries",
             () -> new ItemNameBlockItem(ModBlocks.HONEY_BERRY_BUSH.get(), new Item.Properties().food(ModFoodProperties.HONEY_BERRY)));
 
+    public static final RegistryObject<Item> TRICERATOPS_SPAWN_EGG = ITEMS.register("triceratops_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.TRICERATOPS, 0x53524b, 0xdac741, new Item.Properties()));
 
 
 
