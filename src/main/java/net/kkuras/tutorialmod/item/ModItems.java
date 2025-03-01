@@ -3,10 +3,7 @@ package net.kkuras.tutorialmod.item;
 import net.kkuras.tutorialmod.TutorialMod;
 import net.kkuras.tutorialmod.block.ModBlocks;
 import net.kkuras.tutorialmod.entity.ModEntities;
-import net.kkuras.tutorialmod.item.custom.ChiselItem;
-import net.kkuras.tutorialmod.item.custom.FuelItem;
-import net.kkuras.tutorialmod.item.custom.HammerItem;
-import net.kkuras.tutorialmod.item.custom.ModArmorItem;
+import net.kkuras.tutorialmod.item.custom.*;
 import net.kkuras.tutorialmod.sound.ModSounds;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -95,7 +92,8 @@ public class ModItems {
     public static final RegistryObject<Item> TRICERATOPS_SPAWN_EGG = ITEMS.register("triceratops_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.TRICERATOPS, 0x53524b, 0xdac741, new Item.Properties()));
 
-
+    public static final RegistryObject<Item> TOMAHAWK = ITEMS.register("tomahawk",
+            () -> new TomahawkItem(new Item.Properties().stacksTo(16)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

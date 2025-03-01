@@ -2,6 +2,7 @@ package net.kkuras.tutorialmod.event;
 
 import net.kkuras.tutorialmod.TutorialMod;
 import net.kkuras.tutorialmod.entity.ModEntities;
+import net.kkuras.tutorialmod.entity.client.TomahawkProjectileModel;
 import net.kkuras.tutorialmod.entity.client.TriceratopsModel;
 import net.kkuras.tutorialmod.entity.custom.TriceratopsEntity;
 import net.minecraft.world.entity.SpawnPlacementTypes;
@@ -18,6 +19,7 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(TriceratopsModel.LAYER_LOCATION, TriceratopsModel::createBodyLayer);
+        event.registerLayerDefinition(TomahawkProjectileModel.LAYER_LOCATION, TomahawkProjectileModel::createBodyLayer);
     }
 
     @SubscribeEvent

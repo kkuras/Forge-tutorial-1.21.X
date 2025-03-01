@@ -6,6 +6,8 @@ import net.kkuras.tutorialmod.component.ModDataComponentTypes;
 import net.kkuras.tutorialmod.effect.ModEffects;
 import net.kkuras.tutorialmod.enchantment.ModEnchantmentsEffects;
 import net.kkuras.tutorialmod.entity.ModEntities;
+
+import net.kkuras.tutorialmod.entity.client.TomahawkProjectileRenderer;
 import net.kkuras.tutorialmod.entity.client.TriceratopsRenderer;
 import net.kkuras.tutorialmod.item.ModCreativeModTabs;
 import net.kkuras.tutorialmod.item.ModItems;
@@ -98,6 +100,8 @@ public class TutorialMod {
             ModItemProperties.addCustomItemProperties();
 
             EntityRenderers.register(ModEntities.TRICERATOPS.get(), TriceratopsRenderer::new);
+            EntityRenderers.register(ModEntities.TOMAHAWK.get(), TomahawkProjectileRenderer::new);
+
         }
     }
 } 

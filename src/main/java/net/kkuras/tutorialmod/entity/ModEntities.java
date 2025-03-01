@@ -1,6 +1,7 @@
 package net.kkuras.tutorialmod.entity;
 
 import net.kkuras.tutorialmod.TutorialMod;
+import net.kkuras.tutorialmod.entity.custom.TomahawkProjectileEntity;
 import net.kkuras.tutorialmod.entity.custom.TriceratopsEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -19,7 +20,9 @@ public class ModEntities {
             ENTITY_TYPES.register("triceratops", () -> EntityType.Builder.of(TriceratopsEntity::new, MobCategory.CREATURE)
                     .sized(1.5f, 1.5f).build("triceratops"));
 
-
+    public static final RegistryObject<EntityType<TomahawkProjectileEntity>> TOMAHAWK =
+            ENTITY_TYPES.register("tomahawk", () -> EntityType.Builder.<TomahawkProjectileEntity>of(TomahawkProjectileEntity::new, MobCategory.MISC)
+                    .sized(0.5f, 1.15f).build("tomahawk"));
 
 
     public static void register(IEventBus eventBus) {

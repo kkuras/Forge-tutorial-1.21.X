@@ -50,6 +50,7 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.HONEY_BERRIES.get());
 
                         output.accept(ModItems.TRICERATOPS_SPAWN_EGG.get());
+                        output.accept(ModItems.TOMAHAWK.get());
 
                     }).build());
 
