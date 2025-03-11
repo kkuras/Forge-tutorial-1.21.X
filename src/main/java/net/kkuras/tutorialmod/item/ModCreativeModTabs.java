@@ -93,6 +93,8 @@ public class ModCreativeModTabs {
 
                         output.accept(ModBlocks.WALNUT_SAPLING.get());
 
+                        output.accept(ModBlocks.CHAIR.get());
+
 
 
                     }).build());
