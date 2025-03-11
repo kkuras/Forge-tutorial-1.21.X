@@ -7,6 +7,7 @@ import net.kkuras.tutorialmod.effect.ModEffects;
 import net.kkuras.tutorialmod.enchantment.ModEnchantmentsEffects;
 import net.kkuras.tutorialmod.entity.ModEntities;
 
+import net.kkuras.tutorialmod.entity.client.ChairRenderer;
 import net.kkuras.tutorialmod.entity.client.TomahawkProjectileRenderer;
 import net.kkuras.tutorialmod.entity.client.TriceratopsRenderer;
 import net.kkuras.tutorialmod.item.ModCreativeModTabs;
@@ -101,6 +102,8 @@ public class TutorialMod {
 
             EntityRenderers.register(ModEntities.TRICERATOPS.get(), TriceratopsRenderer::new);
             EntityRenderers.register(ModEntities.TOMAHAWK.get(), TomahawkProjectileRenderer::new);
+
+            EntityRenderers.register(ModEntities.CHAIR.get(), ChairRenderer::new);
 
         }
     }
