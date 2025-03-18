@@ -15,6 +15,7 @@ import net.kkuras.tutorialmod.item.ModItems;
 import net.kkuras.tutorialmod.potion.ModPotions;
 import net.kkuras.tutorialmod.sound.ModSounds;
 import net.kkuras.tutorialmod.util.ModItemProperties;
+import net.kkuras.tutorialmod.villager.ModVillagers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.ComposterBlock;
@@ -59,6 +60,8 @@ public class TutorialMod {
 
         ModEnchantmentsEffects.register(modEventBus);
         ModEntities.register(modEventBus);
+
+        ModVillagers.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
