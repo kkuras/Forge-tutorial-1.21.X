@@ -5,6 +5,8 @@ import net.kkuras.tutorialmod.component.ModDataComponentTypes;
 import net.kkuras.tutorialmod.sound.ModSounds;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.core.particles.BlockParticleOption;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -57,6 +59,13 @@ public class ChiselItem extends Item {
 
                 level.playSound(null, pContext.getClickedPos(), ModSounds.CHISEL_USE.get(), SoundSource.BLOCKS);
 
+                ((ServerLevel) level).sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, clickedBlock.defaultBlockState()),
+                        pContext.getClickedPos().getX() + 0.5, pContext.getClickedPos().getY() + 1.0,
+                        pContext.getClickedPos().getZ() + 0.5, 10, 0, 0, 0, 1);
+
+                ((ServerLevel) level).sendParticles(ParticleTypes.HAPPY_VILLAGER,
+                        pContext.getClickedPos().getX() + 0.5, pContext.getClickedPos().getY() + 1.5,
+                        pContext.getClickedPos().getZ() + 0.5, 10, 0, 0, 0, 3);
 
                 pContext.getItemInHand().set(ModDataComponentTypes.COORDINATES.get(), pContext.getClickedPos());
             }
