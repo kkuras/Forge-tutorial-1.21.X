@@ -12,6 +12,8 @@ import net.kkuras.tutorialmod.entity.client.TomahawkProjectileRenderer;
 import net.kkuras.tutorialmod.entity.client.TriceratopsRenderer;
 import net.kkuras.tutorialmod.item.ModCreativeModTabs;
 import net.kkuras.tutorialmod.item.ModItems;
+import net.kkuras.tutorialmod.particle.AlexandriteParticles;
+import net.kkuras.tutorialmod.particle.ModParticles;
 import net.kkuras.tutorialmod.potion.ModPotions;
 import net.kkuras.tutorialmod.sound.ModSounds;
 import net.kkuras.tutorialmod.util.ModItemProperties;
@@ -20,6 +22,7 @@ import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -62,6 +65,7 @@ public class TutorialMod {
         ModEntities.register(modEventBus);
 
         ModVillagers.register(modEventBus);
+        ModParticles.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -108,6 +112,11 @@ public class TutorialMod {
 
             EntityRenderers.register(ModEntities.CHAIR.get(), ChairRenderer::new);
 
+        }
+
+        @SubscribeEvent
+        public static void registerParticleProvider(RegisterParticleProvidersEvent event) {
+            event.registerSpriteSet(ModParticles.ALEXANDRITE_PARTICLES.get(), AlexandriteParticles.Provider::new);
         }
     }
 } 
