@@ -12,6 +12,7 @@ import net.kkuras.tutorialmod.entity.client.TomahawkProjectileRenderer;
 import net.kkuras.tutorialmod.entity.client.TriceratopsRenderer;
 import net.kkuras.tutorialmod.item.ModCreativeModTabs;
 import net.kkuras.tutorialmod.item.ModItems;
+import net.kkuras.tutorialmod.loot.ModLootModifiers;
 import net.kkuras.tutorialmod.particle.AlexandriteParticles;
 import net.kkuras.tutorialmod.particle.ModParticles;
 import net.kkuras.tutorialmod.potion.ModPotions;
@@ -66,6 +67,8 @@ public class TutorialMod {
 
         ModVillagers.register(modEventBus);
         ModParticles.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
