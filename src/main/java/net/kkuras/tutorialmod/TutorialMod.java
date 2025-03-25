@@ -2,6 +2,7 @@ package net.kkuras.tutorialmod;
 
 import com.mojang.logging.LogUtils;
 import net.kkuras.tutorialmod.block.ModBlocks;
+import net.kkuras.tutorialmod.block.entity.ModBlocksEntities;
 import net.kkuras.tutorialmod.component.ModDataComponentTypes;
 import net.kkuras.tutorialmod.effect.ModEffects;
 import net.kkuras.tutorialmod.enchantment.ModEnchantmentsEffects;
@@ -69,6 +70,7 @@ public class TutorialMod {
         ModParticles.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
+        ModBlocksEntities.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
