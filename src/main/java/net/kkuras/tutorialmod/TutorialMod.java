@@ -2,7 +2,7 @@ package net.kkuras.tutorialmod;
 
 import com.mojang.logging.LogUtils;
 import net.kkuras.tutorialmod.block.ModBlocks;
-import net.kkuras.tutorialmod.block.entity.ModBlocksEntities;
+import net.kkuras.tutorialmod.block.entity.ModBlockEntities;
 import net.kkuras.tutorialmod.block.entity.renderer.PedestalBlockEntityRenderer;
 import net.kkuras.tutorialmod.component.ModDataComponentTypes;
 import net.kkuras.tutorialmod.effect.ModEffects;
@@ -19,6 +19,7 @@ import net.kkuras.tutorialmod.particle.AlexandriteParticles;
 import net.kkuras.tutorialmod.particle.ModParticles;
 import net.kkuras.tutorialmod.potion.ModPotions;
 import net.kkuras.tutorialmod.screen.ModMenuTypes;
+import net.kkuras.tutorialmod.screen.custom.GrowthChamberScreen;
 import net.kkuras.tutorialmod.screen.custom.PedestalScreen;
 import net.kkuras.tutorialmod.sound.ModSounds;
 import net.kkuras.tutorialmod.util.ModItemProperties;
@@ -75,7 +76,7 @@ public class TutorialMod {
         ModParticles.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
-        ModBlocksEntities.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
 
         ModMenuTypes.register(modEventBus);
 
@@ -126,6 +127,8 @@ public class TutorialMod {
 
             MenuScreens.register(ModMenuTypes.PEDESTAL_MENU.get(), PedestalScreen::new);
 
+            MenuScreens.register(ModMenuTypes.GROWTH_CHAMBER_MENU.get(), GrowthChamberScreen::new);
+
         }
 
         @SubscribeEvent
@@ -135,7 +138,7 @@ public class TutorialMod {
 
         @SubscribeEvent
         public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
-            event.registerBlockEntityRenderer(ModBlocksEntities.PEDESTAL_BE.get(), PedestalBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.PEDESTAL_BE.get(), PedestalBlockEntityRenderer::new);
         }
     }
 } 

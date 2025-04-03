@@ -98,6 +98,8 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.CHAIR.get());
                         output.accept(ModBlocks.PEDESTAL.get());
 
+                        output.accept(ModBlocks.GROWTH_CHAMBER.get());
+
 
 
                     }).build());

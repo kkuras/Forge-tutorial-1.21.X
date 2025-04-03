@@ -84,6 +84,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         saplingBlock(ModBlocks.WALNUT_SAPLING);
 
 
+        blockWithItem(ModBlocks.GROWTH_CHAMBER);
 
     }
 

@@ -1,6 +1,6 @@
 package net.kkuras.tutorialmod.block.entity.custom;
 
-import net.kkuras.tutorialmod.block.entity.ModBlocksEntities;
+import net.kkuras.tutorialmod.block.entity.ModBlockEntities;
 import net.kkuras.tutorialmod.screen.custom.PedestalMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
@@ -17,7 +17,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
@@ -42,7 +41,7 @@ public class PedestalBlockEntity extends BlockEntity implements MenuProvider {
     private float rotation;
 
     public PedestalBlockEntity( BlockPos pPos, BlockState pBlockState) {
-        super(ModBlocksEntities.PEDESTAL_BE.get(), pPos, pBlockState);
+        super(ModBlockEntities.PEDESTAL_BE.get(), pPos, pBlockState);
     }
 
     public float getRenderingRotation() {
