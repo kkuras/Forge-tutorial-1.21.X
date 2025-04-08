@@ -18,6 +18,7 @@ import net.kkuras.tutorialmod.loot.ModLootModifiers;
 import net.kkuras.tutorialmod.particle.AlexandriteParticles;
 import net.kkuras.tutorialmod.particle.ModParticles;
 import net.kkuras.tutorialmod.potion.ModPotions;
+import net.kkuras.tutorialmod.recipe.ModRecipes;
 import net.kkuras.tutorialmod.screen.ModMenuTypes;
 import net.kkuras.tutorialmod.screen.custom.GrowthChamberScreen;
 import net.kkuras.tutorialmod.screen.custom.PedestalScreen;
@@ -79,6 +80,7 @@ public class TutorialMod {
         ModBlockEntities.register(modEventBus);
 
         ModMenuTypes.register(modEventBus);
+        ModRecipes.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
