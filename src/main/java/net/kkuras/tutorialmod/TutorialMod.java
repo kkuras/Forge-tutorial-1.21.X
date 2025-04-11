@@ -72,7 +72,6 @@ public class TutorialMod {
 
         ModEnchantmentsEffects.register(modEventBus);
         ModEntities.register(modEventBus);
-
         ModVillagers.register(modEventBus);
         ModParticles.register(modEventBus);
 
